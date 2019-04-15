@@ -1,12 +1,11 @@
 ---
 layout: post
-title: 相关博客
+title: 그룹 참여자 링크
 permalink: /reference/
 ---
 
 * content
 {:toc}
-
 
 HQ
 =====================
