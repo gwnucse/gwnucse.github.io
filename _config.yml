@@ -1,1 +1,25 @@
-theme: jekyll-theme-merlot
+# Site settings
+name: All that it
+email: gwmucse@gmail.com
+author: seokwon yi
+url: http://gwnucse.github.io
+resume_site: http://gwnucse.github.io/
+github: https://github.com/gwnucse/
+baseurl: "/"
+description: 강릉원주대학교 컴퓨터공하과 all that it 공식 블로그입니다.
+meta_description: 강릉원주대학교;컴퓨터공학과;모임;스터디그룹;
+motto: 최고가 아닌 최선!
+banner: ??
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: luoyan35714
+
+# Build settings
+markdown: kramdown
+
+#baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
