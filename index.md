@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## Wellcome to gwnu cse All that It Blog
 
-You can use the [editor on GitHub](https://github.com/gwnucse/gwnucse.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+안녕하세요 저는 All that it를 기획하고 이끌어가고 있는 19년현재 4학년 14학번 이석원입니다.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+강릉원주대학교 컴퓨터 공학과 All that It 라고 하는 소모임 공식 블로그입니다.
 
-### Markdown
+All that it는 학생들간 기술 교류를 목적으로 만들어진 모임입니다.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+강릉원주대학교 컴퓨터 공학과 전체 학생들을 대상으로 ATI 소속인원들이 강의와 프레젠테이션을 합니다.
 
-```markdown
-Syntax highlighted code block
+앞으로 ATI 인원들은 돌아가며 강의나 발표할 것이고, 소속원도 어느정도 기준을 가지고 뽑을 겁니다.
 
-# Header 1
-## Header 2
-### Header 3
+앞으로 모임이 발전할 경우 선배들이 코딩테스트 문제를 만들고 후배들이 문제를 푸는 것도 할 생각이고, 이 사이트 html, javascript 내에 코드를 숨겨서 문제를 푸는 것도 할겁니다.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gwnucse/gwnucse.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**하지만** 그게 다 여러분의 참여가 있어야 가능하니 여러분! 많이 참여해주세요~
