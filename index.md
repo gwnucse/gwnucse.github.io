@@ -1,5 +1,10 @@
 ---
-comment:true
+layout: post
+title:  "Wellcome to 'Allthat IT' Blog"
+date:   2019-04-16 09:00:00 +0800
+categories: intro
+tag: intro
+comment: true
 ---
 
 # Wellcome to gwnu cse 'All that It' Blog
