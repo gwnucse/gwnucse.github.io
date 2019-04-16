@@ -7,8 +7,6 @@ tag: intro
 comment: true
 ---
 
-# Wellcome to gwnu cse 'All that It' Blog
-
 ### 저는
 
 안녕하세요 저는 All that it를 기획하고 이끌어가고 있는 19년 현재 4학년 14학번 이석원입니다.
