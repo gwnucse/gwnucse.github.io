@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 그룹 참여자 링크
+title: 그룹 참여자들
 permalink: /reference/
 ---
 
@@ -8,9 +8,6 @@ permalink: /reference/
 {:toc}
 
 
-### 핵심인물들
-
----
 
 #### 이석원
 
