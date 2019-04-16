@@ -1,3 +1,7 @@
+---
+comment:trouble
+---
+
 # Wellcome to gwnu cse 'All that It' Blog
 
 ### 저는
