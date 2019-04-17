@@ -18,6 +18,8 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Markdown
 
+[한글번역 마크다운 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
