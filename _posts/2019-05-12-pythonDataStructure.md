@@ -227,7 +227,7 @@ list의 인덱싱과 slicing을 테스트하는 문제입니다.
 
 ## Tuples
 
-튜플은 immutable, order라는 속성을 가지고 있습니다.
+튜플은 **immutable, order** 는 속성을 가지고 있습니다.
 ```
 location = (13.4125, 103.866667)
 print("Latitude:", location[0])
@@ -264,7 +264,7 @@ print(tuple_a[1])
 
 ## sets
 
-set은 mutable, Unordered합니다.
+set은 **mutable, Unordered** 합니다.
 set은 진짜 집합과 같습니다. 집합에서 같은 원소가 없죠? list에서 set으로 변환 할때 set도 중복된 원소는 알아서 지워줍니다.
 ```
 numbers = [1, 2, 6, 3, 1, 1, 6]
@@ -316,3 +316,288 @@ b.pop()
 2. 아니오
 3. 어쩌면요?
 4. 이거 에러입니다.
+
+## Dictionaries
+
+dictionary는 키에 따라 값을 매핑하는 **mutable** 한 데이터 구조입니다.
+```
+elements = {"hydrogen":1, "helium":2, "carbon":6}
+```
+dictionary의 키는 immutalbe한 것이면 어떤 것이든 가능합니다. string뿐만 아니라 integer와 tuple도 가능합니다. 심지어 한 dictaionary 안에 각 키의 type이 달라도 가능합니다. 키를 이용해서 값을 참조 할때는 대괄호를 하용합니다.
+```
+print(elements["helium"])  # print the value mapped to "helium"
+elements["lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
+```
+list와 set에서 사용했던 것처럼 `in`키워드도 사용가능합니다. 또 get이라는 메소드도 사용가능한데 대괄호를 사용할때랑 다르게 존재하지 않는 키를 조회하면 None을 반환합니다.
+```
+print("carbon" in elements)
+print(elements.get("dilithium"))
+```
+실행결과
+```
+True
+None
+```
+보통 컴파일 에러를 피하기 위해서 대괄호를 사용하는 것 보다 `get`을 이용하는 것이 더 좋다고 합니다. `None`자체를 프로그래밍에 이용할 수 있기 때문이죠!
+```
+>>> elements.get('dilithium')
+None
+>>> elements['dilithium']
+KeyError: 'dilithium'
+>>> elements.get('kryptonite', 'There\'s no such element!')
+"There's no such element!"
+```
+### Identity Operators
+
+- `is` 왼쪽과 오른쪽이 같은지 확인하는 연산자입니다.
+- `is not` 왼쪽과 오른쪽이 다른지 확인하는 연산자 입니다.
+
+```
+n = elements.get("dilithium")
+print(n is None)
+print(n is not None)
+```
+실행하면
+```
+True
+False
+```
+
+### Quiz
+
+#### 첫번째
+
+다음 데이터를 가지고 있는 dictionary를 정의하세요
+
+|Keys|values|
+|---|---|
+|Shanghai|17.8|
+|Istanbul|13.3|
+|Karachi|13.0|
+|Mumbai|12.5|
+
+#### 두번째
+
+딕셔너리의 키로 쓸수있는 자료형은 무엇인지 골라보세요
+
+1. str
+2. list
+3. int
+4. float
+
+#### 세번째
+
+대괄호로 딕셔너리를 참조할때 존재하지 않는 키값을 참조하면 무슨일이 일어나나요?
+1. `None`값을 리턴한다.
+2. 참조하려는 키값을 딕셔너리에 자동으로 추가하며 그 값은 디폴트인 `None`이 된다.
+3. `KeyError`가 발생한다.
+4. 파이썬이 알아서 인터넷을 검색해서 해결해 준다.(채신기술ㄷㄷ)
+
+#### 네번째 Equality vs. Identity : `==` vs. `is`
+다음 코드의 실행결과는 무엇일 까요?
+
+```
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a == b)
+print(a is b)
+print(a == c)
+print(a is c)
+```
+
+1. `True, True, True, True`
+2. `True, False, True, False`
+3. `True, True, True, False`
+4. `True, True, False, False`
+
+#### 다섯째
+
+```
+animals = {'dogs': [20, 10, 15, 8, 32, 15],
+          'cats': [3,4,2,8,2,4],
+          'rabbits': [2, 3, 3],
+          'fish': [0.3, 0.5, 0.8, 0.3, 1]}
+```
+코드를 보고 다음 질문에 답하세요
+
+1. 키의 자료형은 무엇인가요?
+2. 값의 자료형은 무엇인가요?
+3. `anmals['dogs']`?
+4. `animals['dogs'][3]`?
+5. `animals[3]`?
+6. `animals['fish']`?
+
+## Data Structure 최종점검
+
+### Data structure 종합 문제
+
+#### 첫번째
+다음중 tuple에 대하여 옳은 것만을 모두 고르세요
+1. Mutalbe이다.
+2. Ordered 데이터 구조다.
+3. list와 같이 slicing과 indexing이 모두 가능하다.
+4. 중괄호를 이용해서 선언한다.
+
+#### 두번째
+다음중 set에 대하여 옳은 것만을 모두 고르세요
+1. Mutalbe이다.
+2. Ordered 데이터 구조다.
+3. list와 같이 slicing과 indexing이 모두 가능하다.
+4. 중복된 원소는 가질수 없다.
+
+#### 세번째
+set은 오직 중괄호만을 이용해서 만들수 있다.
+1. 참이다.
+2. 거짓이다.
+
+#### 네번째
+다음중 dictionary에 대하여 옳은 것만을 모두 고르세요
+1. Mutalbe이다.
+2. Ordered 데이터 구조다.
+3. key를 이용하여 인덱스 참조가 가능하다.
+4. dictionary의 모든 키는 유일하다.
+5. 어떤 자료형이든 키로 사용될수 있따.
+
+### DataStructure 혼합하기
+
+데이터 구조 안에 데이터 구조를 넣을 수 있습니다.
+
+```
+elements = {"hydrogen": {"number": 1,
+                         "weight": 1.00794,
+                         "symbol": "H"},
+              "helium": {"number": 2,
+                         "weight": 4.002602,
+                         "symbol": "He"}}
+```
+이런 딕셔너리를 참조할땐 이렇게 합니다.
+```
+helium = elements["helium"]  # get the helium dictionary
+hydrogen_weight = elements["hydrogen"]["weight"]  # get hydrogen's weight
+```
+그리고 뭔가 추가 하고싶다?
+```
+oxygen = {"number":8,"weight":15.999,"symbol":"O"}  # create a new oxygen dictionary
+elements["oxygen"] = oxygen  # assign 'oxygen' as a key to the elements dictionary
+print('elements = ', elements)
+```
+그러면 실행결과는
+```
+elements =  {"hydrogen": {"number": 1,
+                          "weight": 1.00794,
+                          "symbol": 'H'},
+               "helium": {"number": 2,
+                          "weight": 4.002602,
+                          "symbol": "He"},
+               "oxygen": {"number": 8,
+                          "weight": 15.999,
+                          "symbol": "O"}}
+```
+### Quiz
+
+#### 첫번째
+```
+elements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H'},
+            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He'}}
+```
+다음과 같은 결과가 나오도록 딕셔너리에 원소를 추가하세요
+```
+>>> print(elements['hydrogen']['is_noble_gas'])
+False
+>>> print(elements['helium']['is_noble_gas'])
+True
+```
+#### 두번째
+리스트의 특성에 대하여 올바른 것을 모두 고르세요
+1. 데이터를 삽입할때 순서는 중요하지 않다.
+2. 첫번쨰 데이터의 인덱스번호는 0이다.
+3. 정렬가능하다.
+4. `.append`를 이용해서 데이터를 추가할 수 있다.
+5. `.add`를 이용해서 데이터를 추가할 수 있다.
+
+#### 세번째
+
+set의 특성에 대하여 올바른 것을 모두 고르세요
+1. 순서가 정해져 있다.
+2. 중복된 값을 저장할 수 있다.
+3. mutable이다.
+4. `.add`를 이용해서 원소를 추가한다.
+5. 정렬가능하다.
+
+#### 다섯번째
+dictionary의 특성에 대하여 올바른 것을 모두 고르세요
+1. 원소가 두 부분으로 이루어져 있다.
+2. `.append`를 이용해서 원소를 추가한다.
+3. 순서가 정해져 있다.
+4. 정렬가능하다.
+5. 원소로 또다른 dictionary를 사용할 수 있다.
+
+#### 여섯번째
+
+```
+verse = "if you can keep your head when all about you are losing theirs and blaming it on you   if you can trust yourself when all men doubt you     but make allowance for their doubting too   if you can wait and not be tired by waiting      or being lied about  don’t deal in lies   or being hated  don’t give way to hating      and yet don’t look too good  nor talk too wise"
+print(verse, '\n')
+
+# verse의 각 단어를 원소로하는 list를 만들어보세요
+verse_list =
+print(verse_list, '\n')
+
+# list를 set으로 변환 하세요
+verse_set =
+print(verse_set, '\n')
+
+# 각 단어들의 개수를 구해보세요
+num_unique =
+print(num_unique, '\n')
+```
+
+#### 일곱번째
+
+```
+verse_dict =  {'if': 3, 'you': 6, 'can': 3, 'keep': 1, 'your': 1, 'head': 1, 'when': 2, 'all': 2, 'about': 2, 'are': 1, 'losing': 1, 'theirs': 1, 'and': 3, 'blaming': 1, 'it': 1, 'on': 1, 'trust': 1, 'yourself': 1, 'men': 1, 'doubt': 1, 'but': 1, 'make': 1, 'allowance': 1, 'for': 1, 'their': 1, 'doubting': 1, 'too': 3, 'wait': 1, 'not': 1, 'be': 1, 'tired': 1, 'by': 1, 'waiting': 1, 'or': 2, 'being': 2, 'lied': 1, 'don\'t': 3, 'deal': 1, 'in': 1, 'lies': 1, 'hated': 1, 'give': 1, 'way': 1, 'to': 1, 'hating': 1, 'yet': 1, 'look': 1, 'good': 1, 'nor': 1, 'talk': 1, 'wise': 1}
+print(verse_dict, '\n')
+
+# 각 유일한 키들의 개수를 구하세요
+num_keys =
+print(num_keys)
+
+# 'breathe'가 딕셔너리의 키로 있는지 확인해 보세요
+contains_breathe =
+print(contains_breathe)
+
+# 딕셔너리를 키를 정렬해서 list로 만들어 보세요
+sorted_keys =
+
+# 정렬된 키 리스트의 첫번째 원소는 뭔가요
+print()
+
+# 키 리스트의 가장 큰 값은 뭔가요
+print()
+```
+#### 여덟번째
+
+일곱번째 문제와 이어집니다. `verse_dict`에 관하여 옳바른 답을 써주세요
+1. 유일한 단어들은 얼마나 되나요?
+2. 'breathe'가 들어있나요?
+3. 첫번쨰 키는 무엇인가요?
+4. `verse_dict`의 키를 list로 정렬했을 때 첫번째 원소는 무엇인가요?
+5. `verse_dict`의 가장 큰 값은 무엇인가요?
+
+### 정리
+
+|Data structure|Ordered|Mutable|Constructor|Example|
+|--------------|-------|-------|-----------|-------|
+|List|Yes|Yes|`[]`or`list()`|`[5.7, 4, 'yes', 5.7]`|
+|Tuple|Yes|No|`()`or`tuple()`|`(5.7, 4, 'yes', 5.7)`|
+|Set|No|Yes|`{}` * or`set()`|`{5.7, 4, 'yes'}`|
+|Dictionary|No|No**|`{ }`or`dict()`|`{'Jun': 75, 'Jul': 89}`|
+
+\* 중괄호를 비워놓으면 빈 set이 아니라 딕셔너리가 만들어집니다. 그래서 빈set을 만들려면 `set()`을 이용하세요.
+
+** 딕셔너리 자체는 mutalbe이지만 키들은 반드시 immutalbe이어야 합니다.
+
+> 참고 : https://www.udacity.com/course/introduction-to-python--ud1110
+
+작성자 : 이석원
