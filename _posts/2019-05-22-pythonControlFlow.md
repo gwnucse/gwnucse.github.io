@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "python 데이터 구조"
+title:  "python 제어문"
 date:   2019-05-22 09:10:00 +0800
 categories: python
 tag: python, controlFlow
