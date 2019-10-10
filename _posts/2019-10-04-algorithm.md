@@ -9,7 +9,7 @@ comments : true
 
 # 문제 풀러 가기
 
-https://tech.kakao.com/2019/10/02/kakao-blind-recruitment-2020-round1/
+[https://tech.kakao.com/2019/10/02/kakao-blind-recruitment-2020-round1/](https://tech.kakao.com/2019/10/02/kakao-blind-recruitment-2020-round1/)
 
 # 1번 문제 풀이
 
